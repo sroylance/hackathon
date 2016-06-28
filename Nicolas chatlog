@@ -1,0 +1,48 @@
+[3:27 PM] Nicolas Besnard: Hi Stephen,
+[3:27 PM] Stephen Roylance: hi!
+[3:27 PM] Stephen Roylance: thanks for getting back to me
+[3:27 PM] Nicolas Besnard: How can I help you :)
+[3:28 PM] Stephen Roylance: the company is running a hackathon in Waltham: http://vistaprint1193.vpweb.com/
+[3:29 PM] Stephen Roylance: the idea is to identify a customer, merchant and fulfiller problem, and spend a day building up an idea for a solution
+[3:29 PM] Nicolas Besnard: Great idea
+[3:29 PM] Stephen Roylance: I'm curious about magento anyway, and have some PHP experience, so I thought it would be interesting to see how the MCP could plug into magent
+[3:30 PM] Stephen Roylance: it could make merchant integrations, like the easyflyer one, much easier if we had pre-written plugins for magento
+[3:30 PM] Nicolas Besnard: Actually there isn't any connection between magento and MCP.
+[3:31 PM] Stephen Roylance: and since you have gone through the merchant integration process, which is very complex, and are using magento, I thought you could offer some feedback about how an integration could make things simpler
+[3:31 PM] Nicolas Besnard: In fact before access the MCP platform we have many step in the process (prepress, supplier team ...) which are manage outside of magento
+[3:32 PM] Stephen Roylance: so you only used magento for the front-end e-commerce site?
+[3:32 PM] Nicolas Besnard: Sorry, for my writing, there is some automatic correction
+[3:32 PM] Stephen Roylance: no, I really appreciate you taking the time, your input will be very helpful, take as long as you want
+[3:33 PM] Stephen Roylance: and I apologize for speaking no french, while you take the effort to speak english to me
+[3:33 PM] Nicolas Besnard: Yes, we use mangento since the order is paid, after that we have a backoffice tools develop in a mix of delphi and JEE technologie
+[3:35 PM] Nicolas Besnard: The MCP part that could be integrate directlly with magento are : designer studio, inventory management
+[3:35 PM] Stephen Roylance: if the MCP product catalog and fulfillment was available directly from magento, could we have done the piratesofprint.com work in magento, instead of using our own custom website?
+[3:36 PM] Stephen Roylance: I think magento probable has a better CMS than the one we built for ourselves
+[3:37 PM] Nicolas Besnard: Maybe yes piratesofprint, but from what we use of the MCP product Catalog, it's a fulfiller catalog, it is not a marketing catalog. And it's very different.
+[3:38 PM] Stephen Roylance: I see
+[3:38 PM] Nicolas Besnard: For magento CMS, definitively, this is a very good tools for CMS oriented eCOmmerce. You can modify any property of the product link to the SEO
+[3:38 PM] Nicolas Besnard: You can manage the URL at a very low level
+[3:38 PM] Stephen Roylance: what difference do you see between a marketing catalog and a fulfillment catalog?  things like product copy?  pricing?  or more complicated things?
+[3:38 PM] Nicolas Besnard: And everything is modular
+[3:40 PM] Nicolas Besnard: The fulfillment catalog is oriented with product for industry, you have all the prepress constraints, the fabrication constraint, and the categorisation is fulfiller oriented
+[3:41 PM] Nicolas Besnard: In a marketing view you can have multiple products just for 1 product in the fulfiller catalog, and you don't pay attention of the technical constraint.
+[3:42 PM] Stephen Roylance: I see, does magento already have a good facility for building and managing the marketing catalog?  I assume so
+[3:42 PM] Nicolas Besnard: The most important are the description, the name, the price, and when the customer will receive the goods.
+[3:43 PM] Stephen Roylance: is there a challenge in mapping the marketing catalog to the fulfillment layer?  do product managers/marketers need to understand the fulfillment technical details
+[3:43 PM] Nicolas Besnard: yes we use the magento catalog, now we are working to design a technical catalog who link the marketing view and the fulfiller
+[3:44 PM] Nicolas Besnard: No the marketer don't understand and don't pay attention to the fulfillement technical detail, they pay attention to the picture, the description and the price
+[3:44 PM] Stephen Roylance: do you want to move more of the fulfillment pipeline into magento, and get rid of the delphi/java parts?
+[3:45 PM] Nicolas Besnard: No it's not possible
+[3:45 PM] Stephen Roylance: because of magento limitations?
+[3:46 PM] Nicolas Besnard: It's because before the fulfillement, we have a big prepress process, and after we have a human switcher for the orders to the differents fulfiller
+[3:48 PM] Stephen Roylance: for MCP fulfillment, I think the goal is for prepress to have an API, would that make things easier, or do you need custom prepress software?
+[3:49 PM] Nicolas Besnard: For the specific upload and print population of Easyflyer it's not possible to handle all the prepress by an API
+[3:50 PM] Nicolas Besnard: The customer send file that are not at the good format, the numbers of files does not correspond to the number of product
+[3:50 PM] Stephen Roylance: how could magento help with inventory management?  I haven't looked at the MCP APIs for inventory at all yet
+[3:51 PM] Nicolas Besnard: We have many differents rules for the product, and some of the rules depends of the fulfiller
+[3:51 PM] Stephen Roylance: so a person needs to look at the file in a tool like photoshop and fix it for fulfillment?
+[3:52 PM] Nicolas Besnard: when the customer pay, we don't where the product could be print as we can print inside, in pixart, in venlo for the same product. But the technical constraints are not the same.
+[3:53 PM] Stephen Roylance: that sounds difficult, you must have graphic designers who understand all that, who look at each order?
+[3:53 PM] Nicolas Besnard: Yes, most of the time the process is automated with workflow in enFocus pitstop/switch, but the operator can open illustrator or photoshop
+[3:54 PM] Nicolas Besnard: For the inventory management, it's in the goal of renew piratesofprint with a magento and the MCP API. You need the inventory management to show the size and the color that are available
+[3:57 PM] Stephen Roylance: 
