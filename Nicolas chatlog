@@ -45,4 +45,14 @@
 [3:53 PM] Stephen Roylance: that sounds difficult, you must have graphic designers who understand all that, who look at each order?
 [3:53 PM] Nicolas Besnard: Yes, most of the time the process is automated with workflow in enFocus pitstop/switch, but the operator can open illustrator or photoshop
 [3:54 PM] Nicolas Besnard: For the inventory management, it's in the goal of renew piratesofprint with a magento and the MCP API. You need the inventory management to show the size and the color that are available
-[3:57 PM] Stephen Roylance: 
+[3:57 PM] Stephen Roylance: thank you so much for your time, this is very helpful.  I have one more high level question, if you don't mind, having gone through the process with piratesofprint, what do you think MCP/Cimpress could have done better to make that process simpler and faster?
+[3:57 PM] Stephen Roylance: if there were any big things that you think we didn't handle well
+[3:58 PM] Stephen Roylance: also, do you mind if I share this conversation?
+[3:59 PM] Nicolas Besnard: The API is very big for the upload/document management, and it's a big work to understand. And it's the first step before place an order in the platform.
+[3:59 PM] Nicolas Besnard: Maybe,more coded samples could be helpful.
+[4:00 PM] Nicolas Besnard: No problem, you can share, and tell all that I wrote
+[4:00 PM] Stephen Roylance: I think the 'design client library', DCL, will make this easier, but I don't think it's ready yet, and I don't think it will be available for our contest, but I will ask
+[4:01 PM] Nicolas Besnard: We are very interesting in share our opinion and improve the platform
+[4:01 PM] Stephen Roylance: if you don't know about it yet, that's the studio from our website, available to embed as a module
+[4:02 PM] Nicolas Besnard: Yes I heard about it. We want try to use it as soon as we can. We have to replace our old designer which is in flash technology
+[4:05 PM] Stephen Roylance: thank you again for your time, especially since it's so late there
