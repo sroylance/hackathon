@@ -1,0 +1,10 @@
+<config>
+    <default>
+        <sdrtest> <!-- Note that this, is section id from "etc/adminhtml/system.xml" -->
+            <sdrtest> <!-- And this, group id -->
+                <sdrbool>1</sdrbool>
+                <sdrtext>When in the course of human events</sdrtext>
+            </sdrtest>
+        </sdrtest>
+    </default>
+</config>
