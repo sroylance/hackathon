@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config >
+    <menu>
+        <add id="cimpress_sdrtest::mcp_import"
+        title="Import from MCP" 
+        module="cimpress_sdrtest" 
+        sortOrder="50" 
+        parent="Magento_Backend::products"/>
+    </menu>
+</config>
