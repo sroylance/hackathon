@@ -5,10 +5,10 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="Content" template="cimpress_sdrtest::test/test.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="Content" template="cimpress_sdrtest::test.phtml" />
         </referenceContainer>
         <referenceContainer name="left">
-            <block class="Magento\Framework\View\Element\Template" name="Left" template="cimpress_sdrtest::test/test.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="Left" template="cimpress_sdrtest::test.phtml" />
         </referenceContainer>
     </body>
 </page>
