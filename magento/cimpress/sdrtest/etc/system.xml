@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<!-- /** * @author Amasty Team * @copyright Copyright (c) 2015 Amasty (http://www.amasty.com) * @package Amasty_HelloWorld */ -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+<config >
     <system>
         <tab id="sdrtest" translate="label" sortOrder="10">
             <label>sdrtest</label>
@@ -9,6 +8,7 @@
 <section id="sdrtest_test" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>sdrtest_test</label>
             <tab>sdrtest</tab>
+            <resource>cimpress_sdrtest::config</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>General</label>
                 <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
