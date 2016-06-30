@@ -1,5 +1,5 @@
 <?php
-namespace cimpress\sdrtest\Controller\Index;
+namespace Cimpress\sdrtest\Controller\Index;
  
 class Index extends \Magento\Framework\App\Action\Action
 {
