@@ -97,6 +97,7 @@ $dclOptionsTemplateCode = "var configuration = {
 
 print_r($dclOptionsTemplateCode);
 
+return $dclOptionsTemplateCode; 
     }
     
     private static function getAuth0DelegationToken($target_client_id)
