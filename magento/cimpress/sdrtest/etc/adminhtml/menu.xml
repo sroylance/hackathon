@@ -1,11 +1,18 @@
 <?xml version="1.0"?>
 <config >
     <menu>
-        <add id="cimpress_sdrtest::mcp_import"
-        title="Import from MCP" 
-        module="cimpress_sdrtest" 
-        sortOrder="50" 
-        parent="Magento_Backend::products"
-        resource="cimpress_sdrtest::mcp_import"/>
+        <add id="cimpress_sdrtest::mcp"
+            title="MCP" 
+            module="cimpress_sdrtest" 
+            sortOrder="50" 
+            parent="Magento_Catalog::catalog"
+            resource="Cimpress_Sdrtest::mcp"/>
+        <add id="cimpress_sdrtest::mcp_import" 
+            title="Import Item" 
+            module="cimpress_sdrtest"
+            sortOrder="0"
+            parent="cimpress_sdrtest::mcp"
+            action="mcp/import"
+            resource="Cimpress_Sdrtest::mcp_import"/>        
     </menu>
 </config>
