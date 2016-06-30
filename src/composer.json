@@ -1,0 +1,6 @@
+{
+    "require": {
+        "auth0/auth0-php": "~3.0",
+        "nategood/httpful": "*"
+    }
+}
