@@ -9,7 +9,6 @@
 <section id="sdrtest_test" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>sdrtest_test</label>
             <tab>sdrtest</tab>
-            <resource>Amasty_HelloWorld::amasty_helloworld</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>General</label>
                 <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
