@@ -34,9 +34,9 @@ class Index extends \Magento\Backend\App\Action
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('cimpress_sdrtest::mcp_import');
-        #$resultPage->addBreadcrumb(__('Blog Posts'), __('Blog Posts'));
-        #$resultPage->addBreadcrumb(__('Manage Blog Posts'), __('Manage Blog Posts'));
-        #$resultPage->getConfig()->getTitle()->prepend(__('Blog Posts'));
+        $resultPage->addBreadcrumb(__('mcp'), __('mcp'));
+        $resultPage->addBreadcrumb(__('MCP import'), __('MCP import'));
+        $resultPage->getConfig()->getTitle()->prepend(__('MCP product import'));
 
         return $resultPage;
     }
