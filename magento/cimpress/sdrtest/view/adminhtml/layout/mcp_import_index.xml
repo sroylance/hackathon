@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page layout="admin-2columns-left">
+    <head>
+        <title>MCP Product Import</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="Content" template="cimpress_sdrtest::test/test.phtml" />
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Magento\Framework\View\Element\Template" name="Left" template="cimpress_sdrtest::test/test.phtml" />
+        </referenceContainer>
+    </body>
+</page>
