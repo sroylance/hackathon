@@ -1,6 +1,6 @@
  {
-"name": "Cimpress/sdrtest",
+"name": "cimpress/sdrtest",
 "autoload": {
-    "psr-4": { "Cimpress\\sdrtest\\": "" },
+    "psr-4": { "cimpress\\sdrtest\\": "" },
     "files": [ "registration.php" ]
 } }
