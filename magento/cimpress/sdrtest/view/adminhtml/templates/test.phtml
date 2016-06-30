@@ -2,5 +2,7 @@
 <p> hello, i'm a side panel :) #JustSidePanelThings</p>
 <?php
     $stuff = $this->getStuff();
-    echo $stuff;
-    ?>
+    foreach ($stuff as $value) {
+        echo $value;
+    }
+?>
