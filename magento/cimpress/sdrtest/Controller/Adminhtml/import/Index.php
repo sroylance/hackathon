@@ -37,6 +37,7 @@ class Index extends \Magento\Backend\App\Action
         $resultPage->addBreadcrumb(__('mcp'), __('mcp'));
         $resultPage->addBreadcrumb(__('MCP import'), __('MCP import'));
         $resultPage->getConfig()->getTitle()->prepend(__('MCP product import'));
+        $resultPage->getLayout()->getBlock('Test')->setStuff(['a','b','c'])
 
         return $resultPage;
     }
