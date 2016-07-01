@@ -50,7 +50,7 @@ class Create extends \Magento\Backend\App\Action
 
         #var_dump($this->APIClient->getVcsProducts());
         #var_dump($this->getRequest()->getParam('sku'));
-        #$resultPage->getLayout()->getBlock('Create')->setSKU($this->getRequest()->getParam('sku'));
+        $resultPage->getLayout()->getBlock('Create')->setSKU($this->getRequest()->getParam('sku'));
 
         return $resultPage;
     }
