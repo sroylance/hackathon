@@ -45,12 +45,16 @@ class Create extends \Magento\Backend\App\Action
         $resultPage->addBreadcrumb(__('MCP import'), __('MCP import'));
         $resultPage->getConfig()->getTitle()->prepend(__('MCP product import'));
 
-        #$cfg_token = $this->scopeConfig->getValue('sdrtest/general/refreshtoken');
+        $sku = $this->getRequest()->getParam('sku');
+        $products = $this->APIClient->getVcsProducts();
+        foreach ($products as $p) {
+            if ($p->Sku == $sku) {
+                $product = $p;
+            }
+        }
 
 
-        #var_dump($this->APIClient->getVcsProducts());
-        #var_dump($this->getRequest()->getParam('sku'));
-        $resultPage->getLayout()->getBlock('Create')->setSKU($this->getRequest()->getParam('sku'));
+        $resultPage->getLayout()->getBlock('Create')->setProdict($product);
 
         return $resultPage;
     }
