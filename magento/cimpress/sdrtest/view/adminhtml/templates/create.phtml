@@ -1,5 +1,5 @@
 <?php $product = $this->getProduct() ?>
-<form method="POST" action="<?= $block->getFormActionUrl('mcp/import/save') ?>">
+<form method="POST" action="<?= $block->getUrl('mcp/import/save') ?>">
 sku<input type="text" name="sku" value="<?= $product->Sku ?>">
 name<input type="text" name="productname" value="<?= $product->ProductName ?>">
 Description<input type="text" name="desc">
