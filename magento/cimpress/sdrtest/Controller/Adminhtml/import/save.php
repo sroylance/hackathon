@@ -38,6 +38,15 @@ class Save extends \Magento\Backend\App\Action
      */
     public function execute()
     {
-        var_dump($this->getRequest()->getParams());
+        /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
+        $resultPage = $this->resultPageFactory->create();
+        $resultPage->setActiveMenu('cimpress_sdrtest::mcp_import');
+        $resultPage->addBreadcrumb(__('mcp'), __('mcp'));
+        $resultPage->addBreadcrumb(__('MCP import'), __('MCP import'));
+        $resultPage->getConfig()->getTitle()->prepend(__('MCP product import'));
+
+        var_dump($this->request);
+
+        return $resultPage;
     }
 }
