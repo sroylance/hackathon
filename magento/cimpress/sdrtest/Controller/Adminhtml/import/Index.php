@@ -5,7 +5,7 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve config values
 
-require_once('CimpressApi.php')
+require_once('CimpressApi.php');
 
 class Index extends \Magento\Backend\App\Action
 {
