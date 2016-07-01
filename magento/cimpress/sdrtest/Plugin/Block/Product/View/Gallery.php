@@ -2,6 +2,11 @@
 
 namespace cimpress\sdrtest\Plugin\Block\Product\View;
 
+require_once __DIR__.'/../../../../Controller/Adminhtml/import/CimpressApi.php';
+
+use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve config values
+use Cimpress\PortalApi;
+
 /**
  * Plugin for \Magento\Catalog\Block\Product\View\Gallery
  */
@@ -15,27 +20,29 @@ class Gallery
     public function afterGetGalleryImages(\Magento\Catalog\Block\Product\View\Gallery $gallery, $images)
     {
         $p = $gallery->getProduct();
-
-
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-        $dataObject = $objectManager->create('Magento\Framework\DataObject');
 
-        $images->addItem($dataObject);
+        $scopeConfig = $objectManager->create('Magento\Framework\App\Config\ScopeConfigInterface');
 
-        foreach ($images as $image) {
-                /* @var \Magento\Framework\DataObject $image */
-                $image->setData(
+        $apiClient = new \Cimpress\PortalApi($scopeConfig->getValue('sdrtest/general/refreshtoken'));
+
+        foreach($apiClient->getScenes($p->getSku()) as $scene){
+            $dataObject = $objectManager->create('Magento\Framework\DataObject');
+
+            $images->addItem($dataObject);
+
+            $dataObject->setData(
                     'small_image_url',
-                    'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'
+                    $scene
                 );
-                $image->setData(
-                    'medium_image_url',
-                    'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'
-                );
-                $image->setData(
-                    'large_image_url',
-                    'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'
-                );
+            $dataObject->setData(
+                'medium_image_url',
+                $scene
+            );
+            $dataObject->setData(
+                'large_image_url',
+                $scene
+            );
         }
 
         return $images;
