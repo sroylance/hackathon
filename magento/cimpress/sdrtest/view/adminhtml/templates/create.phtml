@@ -1,2 +1,6 @@
-<h1> This is all the stuff you can sell </h1>
-<?php var_dump($this->getProduct()) ?>
+<?php $product = $this->getProduct() ?>
+<form>
+sku<input type="text" name="sku"><?= $product->Sku ?></input>
+name<input type="text" name="desc"><?= $product->ProductName ?></input>
+<submit>
+</form>
