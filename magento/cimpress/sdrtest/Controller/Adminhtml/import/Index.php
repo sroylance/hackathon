@@ -6,6 +6,7 @@ use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve config values
 
 require_once('CimpressApi.php');
+use Cimpress\PortalApi;
 
 class Index extends \Magento\Backend\App\Action
 {
@@ -27,7 +28,7 @@ class Index extends \Magento\Backend\App\Action
         parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
         $this->scopeConfig = $scopeConfig; // Needed to retrieve config values
-        $this->APIClient = new Cimpress\PortalApi($this->scopeConfig->getValue('sdrtest/general/refreshtoken'));
+        $this->APIClient = new PortalApi($this->scopeConfig->getValue('sdrtest/general/refreshtoken'));
     }
 
     /**
