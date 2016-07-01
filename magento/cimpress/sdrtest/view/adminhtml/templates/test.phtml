@@ -4,6 +4,6 @@
 <?php
 $stuff = $this->getStuff();
 foreach ($stuff as $value) {
-    ?><tr><td><a href="<?= $block->getUrl('mcp/import/save', $paramsHere = [$value->Sku ] ) ?>"><?= $value->Sku ?></a></td><td><?= $value->ProductName ?></td></tr><?php
+    ?><tr><td><a href="<?= $block->getUrl('mcp/import/save', $paramsHere = ['sku' => $value->Sku ] ) ?>"><?= $value->Sku ?></a></td><td><?= $value->ProductName ?></td></tr><?php
 }
 ?></table>
