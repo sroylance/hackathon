@@ -19,9 +19,11 @@ class Index extends \Magento\Backend\App\Action
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory
+        ScopeConfigInterface $scopeConfig // Needed to retrieve config values
     ) {
         parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
+        $this->scopeConfig = $scopeConfig; // Needed to retrieve config values
     }
 
     /**
@@ -37,7 +39,11 @@ class Index extends \Magento\Backend\App\Action
         $resultPage->addBreadcrumb(__('mcp'), __('mcp'));
         $resultPage->addBreadcrumb(__('MCP import'), __('MCP import'));
         $resultPage->getConfig()->getTitle()->prepend(__('MCP product import'));
-        $resultPage->getLayout()->getBlock('Test')->setStuff(['a','b','c']);
+
+        $cfg_token = $this->scopeConfig->getValue('sdrtest/general/refreshtoken');
+
+
+        $resultPage->getLayout()->getBlock('Test')->setStuff(['a','b','c', $cfg_token]);
 
         return $resultPage;
     }
