@@ -22,7 +22,7 @@ class PortalApi {
         $jwt = $this->memcache->get(self::VCS_TOKEN_KEY);
         if(empty($jwt))
         {
-            $jwt = self::getAuth0DelegationToken(self::VCS_CLIENT_ID);
+            $jwt = getAuth0DelegationToken(self::VCS_CLIENT_ID);
             $this->memcache->set(self::VCS_TOKEN_KEY, $jwt, 0, 60*60*6);
         }
 
@@ -37,7 +37,7 @@ class PortalApi {
         return $response->body;
     }
     
-    private static function getAuth0DelegationToken($target_client_id)
+    private function getAuth0DelegationToken($target_client_id)
     {
         $url = "https://cimpress.auth0.com/delegation?grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&client_id=QkxOvNz4fWRFT6vcq79ylcIuolFz2cwN&api_type=auth0&scope=openid+name+email+scopes+app_metadata&refresh_token=".$this->refresh_token."&target=".$target_client_id;
         $response = \Httpful\Request::get($url)
