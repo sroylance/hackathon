@@ -5,7 +5,7 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve config values
 
-class Index extends \Magento\Backend\App\Action
+class Index extends \Magento\Framework\App\Action\Action
 {
 
     /**
