@@ -67,7 +67,7 @@ class PortalApi {
             ->addHeader('Accept','application/json')
             ->send();
 
-            array_push($sceneUrls, 'http://rendering.documents.cimpress.io/v1/vp-dev/preview?width=500&scene='.$detailResponse->body->underlaySceneUri);
+            array_push($sceneUrls, 'http://rendering.documents.cimpress.io/v1/preview?width=500&scene='.$detailResponse->body->underlaySceneUri.'&imageuris=http%3A%2F%2Fvistawiki.vistaprint.net%2Fw%2Fimages%2F8%2F86%2F2014_11_16_cimpress_LOGO_TRANSPARENT.png');
         }
 
         return $sceneUrls;
