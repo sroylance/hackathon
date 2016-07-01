@@ -48,7 +48,6 @@ class Create extends \Magento\Backend\App\Action
         $sku = $this->getRequest()->getParam('sku');
         $products = $this->APIClient->getVcsProducts();
         foreach ($products as $p) {
-            var_dump($p);
             if ($p->Sku == $sku) {
                 $product = $p;
             }
