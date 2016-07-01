@@ -49,7 +49,7 @@ class Index extends \Magento\Backend\App\Action
 
 
         $resultPage->getLayout()->getBlock('Test')->setStuff(['a','b','c', $cfg_token]);
-        echo $this->APIClient->getVcsProducts();
+        var_dump($this->APIClient->getVcsProducts());
 
         return $resultPage;
     }
