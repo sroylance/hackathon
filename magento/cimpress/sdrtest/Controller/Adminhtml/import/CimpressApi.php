@@ -22,7 +22,7 @@ class PortalApi {
         $jwt = $this->memcache->get(self::VCS_TOKEN_KEY);
         if(empty($jwt))
         {
-            $jwt = getAuth0DelegationToken(self::VCS_CLIENT_ID);
+            $jwt = $this->getAuth0DelegationToken(self::VCS_CLIENT_ID);
             $this->memcache->set(self::VCS_TOKEN_KEY, $jwt, 0, 60*60*6);
         }
 
