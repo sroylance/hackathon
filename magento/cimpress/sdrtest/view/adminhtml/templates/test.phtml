@@ -5,7 +5,7 @@
     $stuff = $this->getStuff();
     #var_dump($stuff);
     foreach ($stuff as $value) {
-        #echo var_dump($value);
-        ?><tr><td><?= $value->Sku ?></td><td>2</td></tr><?php
+        echo var_dump($value);
+        ?><tr><td><?= $value->Sku ?></td><td><?= $value->Name ?></td></tr><?php
     }
 ?>
