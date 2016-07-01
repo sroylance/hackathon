@@ -1,7 +1,7 @@
 <?php
 namespace cimpress\dcl\Controller\Adminhtml\Import;
 
-use Magento\Backend\App\Action\Context;
+use Magento\Framework\View\Element\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve config values
 
