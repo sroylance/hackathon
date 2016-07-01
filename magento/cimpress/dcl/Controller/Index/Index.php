@@ -1,10 +1,10 @@
 <?php
-namespace cimpress\dcltest\Controller\Index;
+namespace cimpress\dcl\Controller\Index;
  
 class Index extends \Magento\Framework\App\Action\Action
 {
     public function execute()
     {
-        echo 'Hello, Nurse!';
+        echo 'DCL CONTENT GOES HERE';
     }
 }
