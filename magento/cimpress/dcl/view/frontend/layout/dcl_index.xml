@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<page>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="DesignClientLibrary" template="cimpress_dcl::dcl.phtml" />
+        </referenceContainer>
+    </body>
+</page>
