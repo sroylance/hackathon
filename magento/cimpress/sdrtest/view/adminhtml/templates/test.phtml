@@ -1,10 +1,9 @@
 <h1> This is all the stuff you can sell </h1>
-<table>
+<table border='1' >
 <tr><th>SKU</th><th>Name</th></tr>
 <?php
-    $stuff = $this->getStuff();
-    #var_dump($stuff);
-    foreach ($stuff as $value) {
-        ?><tr><td><?= $value->Sku ?></td><td><?= $value->ProductName ?></td></tr><?php
-    }
-?>
+$stuff = $this->getStuff();
+foreach ($stuff as $value) {
+    ?><tr><td><a href="<?= $block->getUrl().'?'.$value->Sku ?>"><?= $value->Sku ?></a></td><td><?= $value->ProductName ?></td></tr><?php
+}
+?></table>
