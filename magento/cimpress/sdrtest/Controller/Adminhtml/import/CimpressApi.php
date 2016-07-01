@@ -1,7 +1,7 @@
 <?php
 
 namespace Cimpress;
-include('./httpful.phar');
+require_once 'httpful.phar';
 
 
 class PortalApi {
