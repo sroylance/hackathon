@@ -8,7 +8,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve con
 require_once('CimpressApi.php');
 use Cimpress\PortalApi;
 
-class Index extends \Magento\Backend\App\Action
+class Create extends \Magento\Backend\App\Action
 {
 
     /**
@@ -49,7 +49,8 @@ class Index extends \Magento\Backend\App\Action
 
 
         #var_dump($this->APIClient->getVcsProducts());
-        var_dump($this->getRequest()->getParam('sku'));
+        #var_dump($this->getRequest()->getParam('sku'));
+        $resultPage->getLayout()->getBlock('Create')->setSKU($this->getRequest()->getParam('sku'));
 
         return $resultPage;
     }
