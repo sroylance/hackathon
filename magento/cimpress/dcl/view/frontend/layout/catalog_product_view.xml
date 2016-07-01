@@ -66,7 +66,7 @@
                     <referenceBlock name="product.info.addtocart" remove="true"/>
 
                     <container name="product.info.form.content" as="product_info_form_content">
-                        <block class="Magento\Catalog\Block\Product\View" name="product.info.dcladdtocart" as="addtocart" template="dcl::addtocart.phtml"/>
+                        <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart" as="addtocart" template="dcl::addtocart.phtml"/>
                     </container>
                     <block class="Magento\Framework\View\Element\Template" name="product.info.form.options" as="options_container">
                         <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper" as="product_options_wrapper" template="product/view/options/wrapper.phtml">
@@ -81,7 +81,7 @@
                         </block>
                         <referenceBlock name="product.info.addtocart.additional" remove="true"/>
                         <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper.bottom" as="product_options_wrapper_bottom" template="product/view/options/wrapper/bottom.phtml">
-                            <block class="Magento\Catalog\Block\Product\View" name="product.info.dcladdtocart.additional" as="product.info.addtocart" template="dcl::addtocart.phtml"/>
+                            <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart.additional" as="product.info.addtocart" template="dcl::addtocart.phtml"/>
                         </block>
                     </block>
                 </block>
