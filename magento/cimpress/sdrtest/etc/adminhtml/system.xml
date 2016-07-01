@@ -23,7 +23,7 @@
                 </field>
                 <field id="refreshtoken" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Auth0 refresh token</label>
-                    <commend>Retrieve from developer.cimpress.io</comment>
+                    <comment>Retrieve from developer.cimpress.io</comment>
                 </field>
             </group>
         </section>
