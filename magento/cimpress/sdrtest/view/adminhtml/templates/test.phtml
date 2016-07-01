@@ -1,5 +1,5 @@
 <h1> This is all the stuff you can sell </h1>
-<table>
+<table border='1' >
 <tr><th>SKU</th><th>Name</th></tr>
 <?php
 $stuff = $this->getStuff();
@@ -7,4 +7,3 @@ foreach ($stuff as $value) {
     ?><tr><td><?= $value->Sku ?></td><td><?= $value->ProductName ?></td></tr><?php
 }
 ?></table>
-<?php
