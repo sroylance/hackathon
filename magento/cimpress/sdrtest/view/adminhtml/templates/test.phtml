@@ -2,10 +2,9 @@
 <table>
 <tr><th>SKU</th><th>Name</th></tr>
 <?php
-    $stuff = $this->getStuff();
-    #var_dump($stuff);
-    foreach ($stuff as $value) {
-        ?><tr><td><?= $value->Sku ?></td><td><?= $value->ProductName ?></td></tr><?php
-    }
-?>
-</table>
+$stuff = $this->getStuff();
+foreach ($stuff as $value) {
+    ?><tr><td><?= $value->Sku ?></td><td><?= $value->ProductName ?></td></tr><?php
+}
+?></table>
+<?php
