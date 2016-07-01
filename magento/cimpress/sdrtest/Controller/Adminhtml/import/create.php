@@ -48,13 +48,13 @@ class Create extends \Magento\Backend\App\Action
         $sku = $this->getRequest()->getParam('sku');
         $products = $this->APIClient->getVcsProducts();
         foreach ($products as $p) {
+            var_dump($p);
             if ($p->Sku == $sku) {
                 $product = $p;
             }
         }
 
-
-        $resultPage->getLayout()->getBlock('Create')->setProdict($product);
+        $resultPage->getLayout()->getBlock('Create')->setProduct($product);
 
         return $resultPage;
     }
