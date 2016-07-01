@@ -1,47 +1,25 @@
 <?php
 namespace cimpress\dcl\Controller\Adminhtml\Import;
 
-use Magento\Framework\View\Element\Context;
-use Magento\Framework\View\Result\PageFactory;
-use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve config values
 
 class Index extends \Magento\Framework\App\Action\Action
 {
-
-    /**
-     * @var PageFactory
-     */
+    /** @var \Magento\Framework\View\Result\PageFactory  */
     protected $resultPageFactory;
-
-    /**
-     * @param Context $context
-     * @param PageFactory $resultPageFactory
-     */
     public function __construct(
-        Context $context,
-        PageFactory $resultPageFactory,
-        ScopeConfigInterface $scopeConfig // Needed to retrieve config values
+        \Magento\Framework\App\Action\Context $context,
+        \Magento\Framework\View\Result\PageFactory $resultPageFactory
     ) {
-        parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
-        $this->scopeConfig = $scopeConfig; // Needed to retrieve config values
+        parent::__construct($context);
     }
-
     /**
-     * Index action
+     * Load the page defined in view/frontend/layout/samplenewpage_index_index.xml
      *
-     * @return \Magento\Backend\Model\View\Result\Page
+     * @return \Magento\Framework\View\Result\Page
      */
     public function execute()
     {
-        /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
-        $resultPage = $this->resultPageFactory->create();
-        #$cfg_token = $this->scopeConfig->getValue('sdrtest/general/refreshtoken');
-
-
-        #$resultPage->getLayout()->getBlock('Test')->setStuff($this->APIClient->getVcsProducts());
-        #var_dump($this->APIClient->getVcsProducts());
-
-        return $resultPage;
+        return $this->resultPageFactory->create();
     }
 }
