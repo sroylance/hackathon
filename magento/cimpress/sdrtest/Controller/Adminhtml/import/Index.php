@@ -5,6 +5,8 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve config values
 
+require_once('CimpressApi.php')
+
 class Index extends \Magento\Backend\App\Action
 {
 
@@ -25,6 +27,7 @@ class Index extends \Magento\Backend\App\Action
         parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
         $this->scopeConfig = $scopeConfig; // Needed to retrieve config values
+        $this->APIClient = new PortalApi($this->scopeConfig->getValue('sdrtest/general/refreshtoken'));
     }
 
     /**
@@ -45,6 +48,7 @@ class Index extends \Magento\Backend\App\Action
 
 
         $resultPage->getLayout()->getBlock('Test')->setStuff(['a','b','c', $cfg_token]);
+        echo $this->getVcsProducts();
 
         return $resultPage;
     }
