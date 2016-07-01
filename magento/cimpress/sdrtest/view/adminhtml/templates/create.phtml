@@ -3,6 +3,8 @@
 sku<input type="text" name="sku" value="<?= $product->Sku ?>">
 name<input type="text" name="productname" value="<?= $product->ProductName ?>">
 Description<input type="text" name="desc">
-<input type="hidden" name="form_key" value="<?= $block->getFormKey() ?>" />
+<input type="hidden" name="form_key" value="<?= $this->getFormKey() ?>" />
 <input type="submit">
 </form>
+<?php var_dump($this) ?>
+<?php var_dump($block) ?>
