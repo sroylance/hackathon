@@ -6,6 +6,7 @@ use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve config values
 
 require_once('CimpressApi.php');
+require_once('ProductManager.php');
 use Cimpress\PortalApi;
 
 class Create extends \Magento\Backend\App\Action
@@ -52,6 +53,9 @@ class Create extends \Magento\Backend\App\Action
                 $product = $p;
             }
         }
+
+        $pm = $this->_objectManager->create('cimpress\sdrtest\Controller\Adminhtml\Import\ProductManager');
+        $pm->createProduct($product->Sku,$product->ProductName,'Imported from Cimpress MCP');
 
         $resultPage->getLayout()->getBlock('Create')->setProduct($product);
 
