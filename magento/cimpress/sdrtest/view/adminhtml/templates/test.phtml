@@ -1,12 +1,11 @@
-<h1> Side Panel </h1>
-<p> hello, i'm a side panel :) #JustSidePanelThings</p>
+<h1> This is all the stuff you can sell </h1>
+<table>
+<tr><th>SKU</th><th>Name</th></tr>
 <?php
     $stuff = $this->getStuff();
     #var_dump($stuff);
     foreach ($stuff as $value) {
-        ?><p><?php
-        var_dump($value);
-        ?></p><?php
-
+        ?><tr><td><?= $value['Sku'] ?></td><td><?= $value['ProductName'] ?></td>
+        ?></tr><?php
     }
 ?>
