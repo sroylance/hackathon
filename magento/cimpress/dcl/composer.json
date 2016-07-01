@@ -1,0 +1,6 @@
+ {
+"name": "cimpress/dcl",
+"autoload": {
+    "psr-4": { "cimpress\\dcl\\": "" },
+    "files": [ "registration.php" ]
+} }
