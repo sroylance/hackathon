@@ -39,7 +39,7 @@ class PortalApi {
     
     private static function getAuth0DelegationToken($target_client_id)
     {
-        $url = "https://cimpress.auth0.com/delegation?grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&client_id=QkxOvNz4fWRFT6vcq79ylcIuolFz2cwN&api_type=auth0&scope=openid+name+email+scopes+app_metadata&refresh_token=".REFRESH_TOKEN."&target=".$target_client_id;
+        $url = "https://cimpress.auth0.com/delegation?grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&client_id=QkxOvNz4fWRFT6vcq79ylcIuolFz2cwN&api_type=auth0&scope=openid+name+email+scopes+app_metadata&refresh_token=".$this->refresh_token."&target=".$target_client_id;
         $response = \Httpful\Request::get($url)
             ->expectsJson()
             ->send();
