@@ -9,7 +9,9 @@ class PortalApi {
     const MEMCACHED_HOST = '127.0.0.1';
     const MEMCACHED_PORT = 11211;
     const VCS_CLIENT_ID = '4GtkxJhz0U1bdggHMdaySAy05IV4MEDV';
+    const SCENE_CLIENT_ID = 'QNDePQ7j8OFB3VqaYkurQBwGLqmlAyqq';
     const VCS_TOKEN_KEY = 'VCS_TOKEN';
+    const SCENE_TOKEN_KEY = 'SCENE_TOKEN';
 
     private $memcache;
 
@@ -36,6 +38,39 @@ class PortalApi {
             ->send();
 
         return $response->body;
+    }
+
+    public function getScenes($mcpSku)
+    {
+        $jwt = $this->memcache->get(self::SCENE_TOKEN_KEY);
+        if(empty($jwt))
+        {
+            $jwt = $this->getAuth0DelegationToken(self::SCENE_CLIENT_ID);
+            $this->memcache->set(self::SCENE_TOKEN_KEY, $jwt, 0, 60*60*6);
+        }
+
+        $url = 'https://scene.products.cimpress.io/v1/compositeScenesQuery?mcpSku='.$mcpSku;
+
+        $response = \Httpful\Request::get($url)
+            ->expectsJson()
+            ->addHeader('Authorization', 'Bearer '.$jwt)
+            ->addHeader('Accept','application/json')
+            ->send();
+
+        $results = $response->body->results;
+
+        $sceneUrls = array();
+        foreach($results as $result){
+            $detailResponse = \Httpful\Request::get($result->links[0]->href)
+            ->expectsJson()
+            ->addHeader('Authorization', 'Bearer '.$jwt)
+            ->addHeader('Accept','application/json')
+            ->send();
+
+            array_push($sceneUrls, 'http://rendering.documents.cimpress.io/v1/vp-dev/preview?width=500&scene='.$detailResponse->body->underlaySceneUri);
+        }
+
+        return $sceneUrls;
     }
     
     private function getAuth0DelegationToken($target_client_id)
