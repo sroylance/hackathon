@@ -45,11 +45,11 @@ class Index extends \Magento\Backend\App\Action
         $resultPage->addBreadcrumb(__('MCP import'), __('MCP import'));
         $resultPage->getConfig()->getTitle()->prepend(__('MCP product import'));
 
-        $cfg_token = $this->scopeConfig->getValue('sdrtest/general/refreshtoken');
+        #$cfg_token = $this->scopeConfig->getValue('sdrtest/general/refreshtoken');
 
 
-        $resultPage->getLayout()->getBlock('Test')->setStuff(['a','b','c', $cfg_token]);
-        var_dump($this->APIClient->getVcsProducts());
+        $resultPage->getLayout()->getBlock('Test')->setStuff($this->APIClient->getVcsProducts());
+        #var_dump($this->APIClient->getVcsProducts());
 
         return $resultPage;
     }
