@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <!--<preference for="Magento\Catalog\Block\Product\View\Description" type="cimpress\mcp\Block\HelloTitle" />-->
+    <type name="Magento\Catalog\Block\Product\View\Gallery">
+        <plugin name="McpGalleryPlugin" type="cimpress\sdrtest\Plugin\Block\Product\View\Gallery" sortOrder="1" />
+    </type>
+</config>

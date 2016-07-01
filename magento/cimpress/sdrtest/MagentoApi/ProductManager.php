@@ -32,7 +32,7 @@ class ProductManager
                 "attribute_set_id" => 9,
                 "price" => 1,
                 "status" => 1,
-                "visibility"=> 1,
+                "visibility"=> 4, // catalog and search
                 "type_id"=> "virtual",
                 "custom_attributes"=> array(
                     array("attribute_code"=>"description", "value"=>$description))
