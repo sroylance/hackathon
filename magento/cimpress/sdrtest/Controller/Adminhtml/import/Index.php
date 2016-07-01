@@ -3,6 +3,7 @@ namespace cimpress\sdrtest\Controller\Adminhtml\Import;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
+use Magento\Framework\App\Config\ScopeConfigInterface; // Needed to retrieve config values
 
 class Index extends \Magento\Backend\App\Action
 {
@@ -18,7 +19,7 @@ class Index extends \Magento\Backend\App\Action
      */
     public function __construct(
         Context $context,
-        PageFactory $resultPageFactory
+        PageFactory $resultPageFactory,
         ScopeConfigInterface $scopeConfig // Needed to retrieve config values
     ) {
         parent::__construct($context);
